@@ -23,13 +23,7 @@ jobs:
           ls -l
           echo "Fim do PROCESSO"
   
-  Publicar:
-    # criar maquina virtual para usar no pipeline
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v5.0.1
+
         with:
           token: # default is ${{ github.token }}
           # Name of the artifact to deploy
