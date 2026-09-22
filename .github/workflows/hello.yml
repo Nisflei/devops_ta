@@ -35,6 +35,7 @@ jobs:
           echo "Fim do PROCESSO"
 
   Deploy:
+    needs: Compilar
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
