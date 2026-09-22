@@ -1,0 +1,1097 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cristiano Ronaldo | The Legacy</title>
+
+    <style>
+
+        /* ==============================
+           RESET
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 7%;
+
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .logo span {
+            color: #e30613;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e30613;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 120px 7% 80px;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 75% 40%, rgba(180,0,0,0.35), transparent 35%),
+                linear-gradient(110deg, #050505 40%, #160000);
+        }
+
+        .hero::before {
+            content: "CR7";
+
+            position: absolute;
+
+            right: 5%;
+            bottom: -70px;
+
+            font-size: 250px;
+            font-weight: 900;
+
+            color: rgba(255,255,255,0.025);
+
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tag {
+            display: inline-block;
+
+            padding: 8px 16px;
+            margin-bottom: 20px;
+
+            border: 1px solid #e30613;
+            border-radius: 30px;
+
+            color: #e30613;
+
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 9vw, 120px);
+            line-height: 0.9;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: -5px;
+        }
+
+        .hero h1 span {
+            display: block;
+            color: #e30613;
+        }
+
+        .hero p {
+            max-width: 650px;
+
+            margin: 30px 0;
+
+            color: #cfcfcf;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 15px 30px;
+
+            background: #e30613;
+            color: white;
+
+            border-radius: 4px;
+
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #111;
+            transform: translateY(-3px);
+        }
+
+
+        /* ==============================
+           SEÇÕES
+        ============================== */
+
+        section {
+            padding: 100px 7%;
+        }
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        .section-title small {
+            color: #e30613;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            margin-top: 10px;
+
+            font-size: clamp(35px, 5vw, 60px);
+            line-height: 1;
+
+            text-transform: uppercase;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin-top: 20px;
+
+            color: #aaa;
+        }
+
+
+        /* ==============================
+           HISTÓRIA
+        ============================== */
+
+        .history {
+            background: #0d0d0d;
+        }
+
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .history-text p {
+            color: #bbb;
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        .quote {
+            border-left: 4px solid #e30613;
+            padding: 25px;
+            margin-top: 30px;
+
+            background: #151515;
+
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .quote span {
+            display: block;
+
+            margin-top: 10px;
+
+            color: #e30613;
+
+            font-size: 13px;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           ESTATÍSTICAS
+        ============================== */
+
+        .stats {
+            background: #e30613;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat strong {
+            display: block;
+
+            font-size: 55px;
+            font-weight: 900;
+        }
+
+        .stat span {
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+
+        /* ==============================
+           LINHA DO TEMPO
+        ============================== */
+
+        .timeline {
+            position: relative;
+
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            top: 0;
+            bottom: 0;
+
+            width: 2px;
+
+            background: #333;
+        }
+
+        .timeline-item {
+            width: 50%;
+            padding: 20px 50px;
+
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item::after {
+            content: "";
+
+            position: absolute;
+
+            top: 30px;
+
+            width: 14px;
+            height: 14px;
+
+            background: #e30613;
+
+            border-radius: 50%;
+
+            box-shadow: 0 0 0 5px #080808;
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -7px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -7px;
+        }
+
+        .timeline-card {
+            background: #151515;
+
+            padding: 25px;
+
+            border: 1px solid #252525;
+
+            transition: 0.3s;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-5px);
+            border-color: #e30613;
+        }
+
+        .timeline-card .year {
+            color: #e30613;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .timeline-card h3 {
+            margin: 8px 0;
+            font-size: 24px;
+        }
+
+        .timeline-card p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           CONQUISTAS
+        ============================== */
+
+        .achievements {
+            background: #0d0d0d;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #151515;
+
+            padding: 35px;
+
+            border: 1px solid #252525;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #e30613;
+        }
+
+        .card-number {
+            font-size: 45px;
+            font-weight: 900;
+            color: #e30613;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #999;
+        }
+
+
+        /* ==============================
+           PORTUGAL
+        ============================== */
+
+        .portugal {
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.75),
+                    rgba(0,0,0,0.9)
+                ),
+                linear-gradient(135deg, #046a38, #b00020);
+        }
+
+        .portugal h2 {
+            font-size: clamp(45px, 7vw, 80px);
+            text-transform: uppercase;
+        }
+
+        .portugal p {
+            max-width: 700px;
+            margin: 25px auto;
+
+            color: #ddd;
+            font-size: 18px;
+        }
+
+
+        /* ==============================
+           LEGADO
+        ============================== */
+
+        .legacy {
+            text-align: center;
+            background: #080808;
+        }
+
+        .legacy h2 {
+            font-size: clamp(45px, 7vw, 90px);
+            text-transform: uppercase;
+        }
+
+        .legacy h2 span {
+            color: #e30613;
+        }
+
+        .legacy p {
+            max-width: 750px;
+            margin: 25px auto;
+
+            color: #aaa;
+            font-size: 18px;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            padding: 40px 7%;
+
+            border-top: 1px solid #222;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            color: #777;
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+
+        /* ==============================
+           RESPONSIVIDADE
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+            }
+
+            .history-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                width: 100%;
+                left: 0;
+                text-align: left;
+                padding-left: 40px;
+                padding-right: 0;
+            }
+
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 3px;
+                right: auto;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .hero {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat strong {
+                font-size: 38px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ==============================
+         HEADER
+    ============================== -->
+
+    <header>
+
+        <div class="logo">
+            CR<span>7</span>
+        </div>
+
+        <nav>
+            <a href="#historia">História</a>
+            <a href="#carreira">Carreira</a>
+            <a href="#conquistas">Conquistas</a>
+            <a href="#portugal">Portugal</a>
+            <a href="#legado">Legado</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         HERO
+    ============================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                The Legacy
+            </span>
+
+            <h1>
+                Cristiano
+                <span>Ronaldo</span>
+            </h1>
+
+            <p>
+                De uma pequena ilha portuguesa para os maiores
+                palcos do futebol mundial. Conheça a trajetória,
+                os desafios e as conquistas de um dos grandes
+                nomes da história do esporte.
+            </p>
+
+            <a href="#historia" class="btn">
+                Conheça a história
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         HISTÓRIA
+    ============================== -->
+
+    <section class="history" id="historia">
+
+        <div class="section-title">
+
+            <small>01 — Origem</small>
+
+            <h2>O início de um sonho</h2>
+
+            <p>
+                Antes dos grandes estádios, títulos e recordes,
+                existia apenas um garoto com um sonho.
+            </p>
+
+        </div>
+
+
+        <div class="history-grid">
+
+            <div class="history-text">
+
+                <p>
+                    Cristiano Ronaldo dos Santos Aveiro nasceu em
+                    5 de fevereiro de 1985, no Funchal, na ilha da
+                    Madeira, Portugal.
+                </p>
+
+                <p>
+                    Desde pequeno demonstrou grande paixão pelo
+                    futebol. Seu talento chamou atenção ainda nas
+                    categorias de base, levando-o posteriormente
+                    para Lisboa, onde passou a integrar o Sporting.
+                </p>
+
+                <p>
+                    A mudança para Lisboa foi um momento importante
+                    de sua formação. Longe da família, Cristiano
+                    precisou adaptar-se a uma nova realidade enquanto
+                    perseguia o sonho de se tornar jogador profissional.
+                </p>
+
+            </div>
+
+
+            <div class="quote">
+
+                "O talento sem trabalho não significa nada."
+
+                <span>
+                    — Princípio frequentemente associado à trajetória
+                    profissional de Cristiano Ronaldo
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         ESTATÍSTICAS
+    ============================== -->
+
+    <section class="stats">
+
+        <div class="stat">
+            <strong>5</strong>
+            <span>Bolas de Ouro</span>
+        </div>
+
+        <div class="stat">
+            <strong>5</strong>
+            <span>Champions League</span>
+        </div>
+
+        <div class="stat">
+            <strong>1</strong>
+            <span>Eurocopa</span>
+        </div>
+
+        <div class="stat">
+            <strong>1</strong>
+            <span>Nations League</span>
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         CARREIRA
+    ============================== -->
+
+    <section id="carreira">
+
+        <div class="section-title">
+
+            <small>02 — Carreira</small>
+
+            <h2>Uma carreira histórica</h2>
+
+            <p>
+                Uma trajetória construída em diferentes clubes,
+                países e competições.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-card">
+
+                    <span class="year">2002</span>
+
+                    <h3>Sporting CP</h3>
+
+                    <p>
+                        Cristiano Ronaldo estreia profissionalmente
+                        pelo Sporting e começa a despertar o interesse
+                        de grandes clubes europeus.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-card">
+
+                    <span class="year">2003</span>
+
+                    <h3>Manchester United</h3>
+
+                    <p>
+                        Aos 18 anos, chega ao Manchester United,
+                        onde começa a desenvolver-se sob o comando
+                        de Sir Alex Ferguson.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-card">
+
+                    <span class="year">2009</span>
+
+                    <h3>Real Madrid</h3>
+
+                    <p>
+                        Transferência para o Real Madrid marca
+                        o início de uma das fases mais vitoriosas
+                        de sua carreira.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-card">
+
+                    <span class="year">2018</span>
+
+                    <h3>Juventus</h3>
+
+                    <p>
+                        Ronaldo inicia uma nova etapa no futebol
+                        italiano defendendo a Juventus.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-card">
+
+                    <span class="year">2021</span>
+
+                    <h3>Manchester United</h3>
+
+                    <p>
+                        O português retorna ao clube inglês,
+                        reencontrando uma parte importante de sua
+                        história.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-card">
+
+                    <span class="year">2023</span>
+
+                    <h3>Al-Nassr</h3>
+
+                    <p>
+                        Cristiano Ronaldo passa a atuar pelo
+                        Al-Nassr, iniciando uma nova fase de sua
+                        carreira no futebol da Arábia Saudita.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         CONQUISTAS
+    ============================== -->
+
+    <section class="achievements" id="conquistas">
+
+        <div class="section-title">
+
+            <small>03 — Conquistas</small>
+
+            <h2>Marcas e títulos</h2>
+
+            <p>
+                Ao longo de sua carreira, Ronaldo acumulou
+                títulos coletivos e importantes reconhecimentos
+                individuais.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-number">
+                    05
+                </div>
+
+                <h3>Bolas de Ouro</h3>
+
+                <p>
+                    Reconhecimento individual concedido ao
+                    melhor jogador do mundo em diferentes
+                    temporadas.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-number">
+                    05
+                </div>
+
+                <h3>Champions League</h3>
+
+                <p>
+                    Cinco títulos da principal competição
+                    de clubes da Europa.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <h3>Eurocopa</h3>
+
+                <p>
+                    Conquista da Eurocopa de 2016 com
+                    a seleção portuguesa.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <h3>Nations League</h3>
+
+                <p>
+                    Portugal conquistou a primeira edição
+                    da UEFA Nations League em 2019.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-number">
+                    CR7
+                </div>
+
+                <h3>Marca global</h3>
+
+                <p>
+                    O número 7 tornou-se uma das marcas mais
+                    reconhecidas associadas ao jogador.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-number">
+                    ∞
+                </div>
+
+                <h3>Legado</h3>
+
+                <p>
+                    Uma carreira que atravessou diferentes
+                    gerações do futebol mundial.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         PORTUGAL
+    ============================== -->
+
+    <section class="portugal" id="portugal">
+
+        <div class="section-title">
+
+            <small>04 — Seleção</small>
+
+            <h2>Portugal</h2>
+
+            <p>
+                Pela seleção portuguesa, Cristiano Ronaldo
+                tornou-se uma das principais referências da
+                história do futebol do país.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         LEGADO
+    ============================== -->
+
+    <section class="legacy" id="legado">
+
+        <div class="section-title">
+
+            <small>05 — Legado</small>
+
+            <h2>
+                Mais que um
+                <span>jogador.</span>
+            </h2>
+
+            <p>
+                A trajetória de Cristiano Ronaldo é marcada
+                por talento, disciplina, dedicação aos
+                treinamentos e busca constante por evolução.
+            </p>
+
+            <p>
+                Sua história demonstra como uma carreira pode
+                ser construída ao longo de décadas através de
+                objetivos, trabalho e perseverança.
+            </p>
+
+        </div>
+
+        <a href="#inicio" class="btn">
+            Voltar ao topo
+        </a>
+
+    </section>
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer>
+
+        <div>
+            <strong>CR7 — THE LEGACY</strong>
+        </div>
+
+        <div>
+            Projeto educacional em HTML e CSS
+        </div>
+
+        <div>
+            © 2026
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
